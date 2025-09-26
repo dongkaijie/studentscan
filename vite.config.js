@@ -7,6 +7,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './', // 使用相对路径，确保静态资源正确加载
   plugins: [
     vue(),
     AutoImport({
@@ -19,6 +20,20 @@ export default defineConfig({
   resolve:{
     alias:{
       '@': path.resolve(__dirname,'./src') // 设置 @ 指向 src 目录
+    }
+  },
+  build: {
+    outDir: 'dist', // 输出目录
+    assetsDir: 'assets', // 静态资源目录
+    sourcemap: false, // 关闭 sourcemap 减小体积
+    minify: 'terser', // 压缩代码
+    // 确保字符编码
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
     }
   },
   server: {
