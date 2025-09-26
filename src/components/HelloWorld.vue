@@ -1,5 +1,5 @@
-<template>
-  <el-form :model="personForm" :rules="rules" ref="stuForm" label-width="100px" v-loading="loading" element-loading-text="加载中..." element-loading-background="rgba(0, 0, 0, 0.7)">
+<template v-loading="loading" element-loading-text="加载中..." element-loading-background="rgba(0, 0, 0, 0.7)">
+  <el-form :model="personForm" :rules="rules" ref="stuForm" label-width="100px" >
       <el-form-item label="所属部门:" prop="departNo">
         <el-select v-model="personForm.departNo" placeholder="请选择所属部门">
           <el-option v-for="item in departmentOptions" :key="item.value" :label="item.label" :value="item.value"></el-option>
