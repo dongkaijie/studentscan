@@ -7,7 +7,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './', // 使用相对路径，确保静态资源正确加载
+  base: '/', // 使用相对路径，确保静态资源正确加载
   plugins: [
     vue({
        // 添加 Vue 模板编码配置
@@ -56,7 +56,11 @@ export default defineConfig({
       target: 'http://192.168.1.202:8090',
       changeOrigin: true,
       secure: false,
-      rewrite: (path) => path.replace(/^\/api/, 'api')
+      rewrite: (path) => path.replace(/^\/api/, 'api'),
+      cors: true,  // 启用 CORS
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      }
     },
     }
   }

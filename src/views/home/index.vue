@@ -68,7 +68,7 @@ const deviceSerialNumbers = ref([])
 const loading = ref(false)
 
 onMounted(() => {
-  // getInnitData(personParams)
+  getInnitData(personParams)
 })
 
 function getInnitData(personParams) {
