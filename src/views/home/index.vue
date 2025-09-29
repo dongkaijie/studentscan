@@ -68,7 +68,7 @@ const deviceSerialNumbers = ref([])
 const loading = ref(false)
 
 onMounted(() => {
-  getInnitData(personParams)
+  // getInnitData(personParams)
 })
 
 function getInnitData(personParams) {
@@ -136,25 +136,6 @@ const submitHandle = () => {
   });
 }
 
-// 新增人员
-function submitToBackend() {
-  // const formData = {
-  //   departNo: this.personForm.departNo,
-  //   personName: this.personForm.personName,
-  //   phone: this.personForm.phone,
-  //   sex: this.personForm.sex
-  // };
-  // this.loading = true
-  //     this.request(addPersons, formData,this, data => {
-  //       console.log('新增人员的data',data)
-  //       if(data){
-  //         // this.addPersonDialogVisible = false;
-  //         this.getPersonDataList(this.currenDeptNum,1,10)
-  //         this.closeAddPersonDialog()
-  //         this.loading = false
-  //       }
-  //     })
-}
 const count = ref(0)
 </script>
 <style scoped>
