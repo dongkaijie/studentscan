@@ -1,10 +1,10 @@
 <template>
-  <!-- <div>
+  <div>
     <router-view />
-  </div> -->
-  <div style="font-size: 30px; color: green; text-align: center; margin-top: 100px;">
-    🎉 部署成功！这是测试页面2222。
   </div>
+  <!-- <div style="font-size: 30px; color: green; text-align: center; margin-top: 100px;">
+    🎉 部署成功！这是测试页面2222。
+  </div> -->
 </template>
 <script setup>
 </script>
